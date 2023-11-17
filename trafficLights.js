@@ -6,14 +6,16 @@ const colors = ['yellow', 'green','red'];
 
 btn.addEventListener('click', function onClick() {
   btn.style.backgroundColor = colors[colorIndex];
+  
     if (colorIndex < colors.length) {
       ++colorIndex;
     }
     if (colorIndex == colors.length) {
       colorIndex = 0;
     }
+    
 });
-
+  
   function change() {
     btn.style.backgroundColor = colors[colorIndex];
     if (colorIndex < colors.length) {
@@ -24,3 +26,4 @@ btn.addEventListener('click', function onClick() {
     }
   }
   setInterval(change, 10000);
+  
