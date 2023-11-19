@@ -6,24 +6,20 @@ const colors = ['yellow', 'green','red'];
 
 btn.addEventListener('click', function onClick() {
   btn.style.backgroundColor = colors[colorIndex];
-  
-    if (colorIndex < colors.length) {
-      ++colorIndex;
-    }
-    if (colorIndex == colors.length) {
-      colorIndex = 0;
-    }
-    
-});
-  
-  function change() {
-    btn.style.backgroundColor = colors[colorIndex];
-    if (colorIndex < colors.length) {
-      ++colorIndex;
-    }
-    if (colorIndex == colors.length) {
-      colorIndex = 0;
-    }
+  if (colorIndex < colors.length) {
+    ++colorIndex;
   }
-  setInterval(change, 10000);
-  
+  if (colorIndex == colors.length) {
+     colorIndex = 0;
+  }  
+});
+function change() {
+  btn.style.backgroundColor = colors[colorIndex];
+  if (colorIndex < colors.length) {
+    ++colorIndex;
+  }
+  if (colorIndex == colors.length) {
+    colorIndex = 0;
+  }
+}
+setInterval(change, 10000);
